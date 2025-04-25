@@ -1,0 +1,443 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body, html {
+    font-family: 'Noto Serif Display', serif;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.dropdown {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.dropdown-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropdown-button img {
+    width: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    min-width: 200px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Section Base */
+.section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Content Box inside Sections */
+.section .content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1200px;
+    padding: 4rem 3rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    overflow: visible;
+    margin: 6rem auto;
+}
+
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Home Section Specific */
+#home img.overlay-logo {
+    width: 60%;
+    max-width: 500px;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    
+    animation: logoFadeDown 1.5s ease-out forwards;
+}
+
+/* Headings */
+h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    color: black;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #555;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-word;
+    margin-bottom: 1.5rem;
+}
+
+/* About section specific tweaks */
+#about .content {
+    background-color: rgba(128, 105, 78, 0.658);
+    margin: 8rem auto;
+}
+
+.about-heading,
+.about-paragraph {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Breakdown section specific tweaks */
+#breakdown .content {
+    background-color: rgba(128, 105, 78, 0.658);
+    margin: 8rem auto;
+}
+
+.breakdown-heading {
+    color: white;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.breakdown-paragraph {
+    color: white;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1.6rem;
+    line-height: 2;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.breakdown-paragraph br {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Rollout section specific tweaks */
+#rollout .content {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 8rem auto;
+}
+
+.rollout-heading {
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rollout-intro {
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.rollout-paragraph {
+    text-align: right;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Mission section specific tweaks */
+#mission .content {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 8rem auto;
+}
+
+#mission h2,
+#mission p {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#mission h2 {
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#mission p {
+    font-size: 2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Thank You Section tweaks */
+#thankyou .content {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 8rem auto;
+}
+
+.thankyou-heading {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.thankyou-paragraph {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+    font-size: 1.6rem;
+    line-height: 2;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 1000px;
+}
+
+.thankyou-paragraph br {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Product Cost & Revenue section specific tweaks */
+#cost .content {
+    background-color: rgba(128, 105, 78, 0.658);
+    margin: 8rem auto;
+}
+
+.cost-heading {
+    color: white;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.cost-paragraph {
+    color: white;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Courier New', monospace;
+}
+
+.cost-paragraph br {
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Investor Benefits section specific tweaks */
+#investor .content {
+    background-color: rgba(58, 58, 58, 0.658);
+    margin: 8rem auto;
+}
+
+.investor-heading {
+    color: white;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.investor-paragraph {
+    color: white;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1.6rem;
+    line-height: 2;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 1000px;
+}
+
+.investor-paragraph br {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Image Break Section */
+.image-break-section {
+    width: 100%;
+    max-height: 500px;
+    height: 500px;
+    background-image: url('Image_video/IMG_8805.jpg');
+    background-size:contain;
+    background-position: 0% 60%;
+    background-repeat: repeat;
+}
+
+
+/* Responsive Typography */
+@media screen and (max-width: 1200px) {
+    h2 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+    .section .content {
+        padding: 3rem 1.5rem;
+    }
+    /* Specific section adjustments for mobile */
+    .breakdown-paragraph,
+    .cost-paragraph,
+    .investor-paragraph,
+    .thankyou-paragraph {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+    .image-break-section {
+        max-height: 20vh; 
+        background-position: 0% 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .section .content {
+        padding: 2rem 1rem;
+    }
+    /* Further size reduction for very small screens */
+    .breakdown-paragraph,
+    .cost-paragraph,
+    .investor-paragraph,
+    .thankyou-paragraph {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+   
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes logoFadeDown {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -60%); /* Higher than final center */
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%); /* Centered */
+    }
+}
+  
+@keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+@keyframes fadeUpDelayed {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+/* Initial hidden state */
+.fade-up, .fade-up-delayed {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+/* When visible */
+.fade-up.visible {
+    animation: fadeUp 1s ease-out forwards;
+  }
+  
+.fade-up-delayed.visible {
+    animation: fadeUpDelayed 1.2s ease-out forwards;
+  }
