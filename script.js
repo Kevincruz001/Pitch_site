@@ -26,9 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }, observerOptions);
 
   // Target all h2 and p elements inside .content
-  const animatedElements = document.querySelectorAll(
-    ".content h2, .content p, .rollout-intro"
-  );
+  const animatedElements = document.querySelectorAll(".content h2, .content p");
 
   animatedElements.forEach((element) => {
     if (element.tagName === "H2") {

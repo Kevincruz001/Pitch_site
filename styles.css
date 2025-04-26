@@ -123,6 +123,18 @@ h2 {
     color: black;
 }
 
+.product_cost_link {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #ffffff;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-word;
+    margin-bottom: 1.5rem;
+    font-style: none;
+}
+
 /* Paragraphs */
 p {
     font-size: 1.8rem;
@@ -284,6 +296,7 @@ p {
     margin-left: 5%;
     margin-right: 5%;
     font-family: 'Courier New', monospace;
+    text-shadow: 2px 2px 3px black;
 }
 
 .cost-paragraph br {
